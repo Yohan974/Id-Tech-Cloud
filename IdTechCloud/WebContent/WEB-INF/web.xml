@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>IdTechCloud</display-name>
+  
+ <servlet>
+	<servlet-name>Download</servlet-name>
+	<servlet-class>com.idtech.cloud.servlet.Download</servlet-class>
+	<init-param>
+		<param-name>path</param-name> 
+		<param-value>C:\download</param-value> 
+	</init-param>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Download</servlet-name>
+	<url-pattern>/download/*</url-pattern>
+</servlet-mapping>
+  
+  <context-param>
+  	<param-name>JDBC_DRIVER</param-name>
+  	<param-value>com.mysql.cj.jdbc.Driver</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>JDBC_URL</param-name>
+  	<param-value>jdbc:mysql://localhost:3306/idtech?serverTimezone=UTC</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>JDBC_LOGIN</param-name>
+  	<param-value>root</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>JDBC_PASSWORD</param-name>
+  	<param-value></param-value>
+  </context-param>
+  
+  <context-param>
+        <param-name>host</param-name>
+        <param-value>smtp.gmail.com</param-value>
+    </context-param>
+ 
+    <context-param>
+        <param-name>port</param-name>
+        <param-value>587</param-value>
+    </context-param>
+ 
+    <context-param>
+        <param-name>user</param-name>
+        <param-value>yohan.fontaine87</param-value>
+    </context-param>
+ 
+    <context-param>
+        <param-name>pass</param-name>
+        <param-value>V5j6mdp*70n!</param-value>
+    </context-param>
+  
+  <session-config>
+  	<session-timeout>10</session-timeout>
+  </session-config>
+  
+  <welcome-file-list>
+    <welcome-file>login</welcome-file>
+  </welcome-file-list>
+</web-app>
